@@ -14,7 +14,7 @@
 	</welcome-file-list>
 
 	<servlet>
-		<servlet-name>Accenture Awake Web Service</servlet-name>
+		<servlet-name>Accenture Web Service</servlet-name>
 		<servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
 		<init-param>
   <param-name>

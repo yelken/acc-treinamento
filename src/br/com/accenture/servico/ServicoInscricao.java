@@ -33,7 +33,7 @@ public class ServicoInscricao {
         InscricaoDAO inscricaoDAO = new InscricaoDAO();
         inscricaoDAO.salvar(inscricao);
                
-        return "<retornoServico>OK</RetornoServico>";
+        return "<retornoServico>OK</retornoServico>";
     }
                               
 }
