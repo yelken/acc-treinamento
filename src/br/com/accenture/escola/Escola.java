@@ -8,6 +8,8 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 
+import br.com.accenture.basica.Basica;
+
 
 @Entity
 @Table(name="escola")
@@ -15,7 +17,7 @@ import javax.persistence.Table;
 @AttributeOverrides(value={  
         @AttributeOverride(name="id",column=@Column(name="id")),  
 })  
-public class Escola {
+public class Escola extends Basica {
 
     private String descricao;
     private String endereco;

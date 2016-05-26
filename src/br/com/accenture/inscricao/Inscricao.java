@@ -3,9 +3,25 @@ package br.com.accenture.inscricao;
 import java.util.Date;
 import java.util.LinkedList;
 
+import javax.persistence.AttributeOverride;
+import javax.persistence.AttributeOverrides;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.Table;
+
+import br.com.accenture.basica.Basica;
 import br.com.accenture.escola.Escola;
 
-public class Inscricao {
+
+@Entity
+@Table(name="escola")
+@Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)  
+@AttributeOverrides(value={  
+        @AttributeOverride(name="id",column=@Column(name="id")),  
+})  
+public class Inscricao extends Basica {
 
     private String nome;
     private String email;
