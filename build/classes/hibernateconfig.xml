@@ -4,10 +4,13 @@
 <hibernate-configuration>
  <session-factory>
   <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-  <property name="hibernate.connection.url">jdbc:mysql://localhost:3307/accenturetrainning</property>
+  <property name="hibernate.connection.url">jdbc:mysql://localhost:3307/accenture_awake</property>
   <property name="hibernate.connection.username">root</property>
   <property name="hibernate.connection.password"></property>
   <mapping class="br.com.accenture.basica.Basica"/>
- <mapping class="br.com.accenture.usuario.usuario"/>
+  <mapping class="br.com.accenture.usuario.Usuario"/>
+  <mapping class="br.com.accenture.inscricao.Inscricao"/>
+  <mapping class="br.com.accenture.escola.Escola"/>
+  <mapping class="br.com.accenture.horario.Horario"/>
  </session-factory>
 </hibernate-configuration>

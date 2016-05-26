@@ -1,15 +1,15 @@
-package br.com.accenture.usuario;
+package br.com.accenture.horario;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import br.com.accenture.conexao.ConexaoHibernate;
 
-public class UsuarioDAO {
+public class HorarioDAO {
     
 private Session session;
     
-    public void salvar(Usuario i) {
+    public void salvar(Horario i) {
         session = ConexaoHibernate.getInstance();
         Transaction tx = null;
 
