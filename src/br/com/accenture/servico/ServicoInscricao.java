@@ -6,6 +6,7 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 
 import br.com.accenture.escola.Escola;
+import br.com.accenture.horario.Horario;
 import br.com.accenture.inscricao.Inscricao;
 import br.com.accenture.inscricao.InscricaoDAO;
 
@@ -13,12 +14,13 @@ import br.com.accenture.inscricao.InscricaoDAO;
 public class ServicoInscricao {
 
     
-    @Path("{nome}&{email}&{idEscola}")
+    @Path("{nome}&{email}&{idEscola}&{idHorario}")
     @GET
     @Produces("application/xml")
     public String inserirInscricao(@PathParam("nome") String nome,
                                    @PathParam("email") String email,
-                                   @PathParam("idEscola") Integer idEscola) {
+                                   @PathParam("idEscola") Integer idEscola,
+                                   @PathParam("idHorario") Integer idHorario) {
         
         
         Inscricao inscricao = new Inscricao();
@@ -27,6 +29,11 @@ public class ServicoInscricao {
         
         Escola escola = new Escola();
         escola.setIdentifier(idEscola);
+        
+        Horario horario = new Horario();
+        horario.setIdentifier(idHorario);
+        
+        inscricao.setHorario(horario);
         
         inscricao.setEscola(escola);
         

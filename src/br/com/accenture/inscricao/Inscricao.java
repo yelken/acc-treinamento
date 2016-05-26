@@ -31,6 +31,8 @@ public class Inscricao extends Basica {
     @JoinColumn(name = "id_escola")
     private Escola escola;
     
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_horario")
     private Horario horario;
 
     public String getNome() {
@@ -55,5 +57,13 @@ public class Inscricao extends Basica {
 
     public void setEscola(Escola escola) {
         this.escola = escola;
+    }
+
+    public Horario getHorario() {
+        return horario;
+    }
+
+    public void setHorario(Horario horario) {
+        this.horario = horario;
     }
 }
