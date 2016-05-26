@@ -13,6 +13,7 @@ import javax.persistence.Table;
 
 import br.com.accenture.basica.Basica;
 import br.com.accenture.escola.Escola;
+import br.com.accenture.horario.Horario;
 
 
 @Entity
@@ -29,6 +30,8 @@ public class Inscricao extends Basica {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_escola")
     private Escola escola;
+    
+    private Horario horario;
 
     public String getNome() {
         return nome;
