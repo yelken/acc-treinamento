@@ -19,9 +19,9 @@ CREATE TABLE INSCRICAO(
 	id integer auto_increment,
 	nome varchar(100),
 	email varchar(100),
-	id_escola integer;
-	CONSTRAINT INSCRICAO_pk PRIMARY KEY(id)
-	CONSTRAINT INSCRICAO_ESCOLA_fk FOREIGN KEY (id_problema) REFERENCES ESCOLA(id)
+	id_escola integer,
+	CONSTRAINT INSCRICAO_pk PRIMARY KEY(id),
+	CONSTRAINT INSCRICAO_ESCOLA_fk FOREIGN KEY (id_escola) REFERENCES ESCOLA(id)
 	
 );
 
@@ -30,7 +30,7 @@ CREATE TABLE HORARIO (
 	descricao time,
 	CONSTRAINT HORARIO_PK PRIMARY KEY(ID),
 	UNIQUE(DESCRICAO)
-)
+);
 
 CREATE TABLE HORARIO_INSCRICAO(
 	id integer auto_increment,
